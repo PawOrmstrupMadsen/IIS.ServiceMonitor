@@ -61,8 +61,7 @@ int __cdecl _tmain(int argc, _TCHAR* argv[])
             pstrAppPoolName = argv[2];
         }
         IISConfigUtil configHelper = IISConfigUtil();
-        if( FAILED(hr = configHelper.Initialize()) ||
-            FAILED(hr = configHelper.UpdateEnvironmentVarsToConfig(pstrAppPoolName)))
+        if( FAILED(hr = configHelper.Initialize()) )
         {
             _tprintf(L"\nFailed to update IIS configuration\n");
             goto Finished;
