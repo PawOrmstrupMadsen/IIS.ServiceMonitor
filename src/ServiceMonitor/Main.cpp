@@ -63,7 +63,7 @@ int __cdecl _tmain(int argc, _TCHAR* argv[])
         IISConfigUtil configHelper = IISConfigUtil();
         if( FAILED(hr = configHelper.Initialize()) )
         {
-            _tprintf(L"\nFailed to update IIS configuration\n");
+            _tprintf(L"\nFailed to Initialize\n");
             goto Finished;
         }
     }

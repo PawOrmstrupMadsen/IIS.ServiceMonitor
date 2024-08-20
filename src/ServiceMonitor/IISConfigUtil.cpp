@@ -228,7 +228,7 @@ HRESULT IISConfigUtil::RunCommand(wstring& pstrCmd, BOOL fIgnoreError)
     //
     // wait for at most 5 seconds to allow APPCMD finish
     //
-    WaitForSingleObject(pi.hProcess, 5000);
+    WaitForSingleObject(pi.hProcess, 30000);
     if ((!GetExitCodeProcess(pi.hProcess, &dwStatus) || dwStatus != 0) && (!fIgnoreError))
     {
         //
